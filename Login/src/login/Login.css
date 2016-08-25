@@ -10,6 +10,7 @@ and open the template in the editor.
 
 .root{
     -fx-background-image: url("Moon.jpg");
+    -fx-background-size: cover;
    
 }
 .label{
