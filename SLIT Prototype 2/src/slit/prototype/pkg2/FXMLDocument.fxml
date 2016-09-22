@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../../../../build/classes/slit/prototype/pkg2/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slit.prototype.pkg2.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <VBox layoutX="15.0" layoutY="40.0" prefHeight="555.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #9999;">
+         <children>
+            <Button fx:id="modul1Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 1">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul2Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul3Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 3">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul4Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 4">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul5Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 5">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul6Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 6">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul7Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 7">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul8Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 8">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="modul9Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 9">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="module10button" fx:id="modul10Button" mnemonicParsing="false" onAction="#handleTextFieldAction" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Module 10">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="9.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <SplitPane dividerPositions="0.13537117903930132" layoutX="147.0" layoutY="40.0" orientation="VERTICAL" prefHeight="555.0" prefWidth="845.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox layoutY="-1.0" prefHeight="58.0" prefWidth="688.0">
+                     <children>
+                        <Label fx:id="moduleLabel" text="">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="completedLabel" text="">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="11.0" prefHeight="460.0" prefWidth="100.0" style="-fx-background-color: #9999;">
+                     <children>
+                        <Button mnemonicParsing="false" prefWidth="74.0" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Mål">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <tooltip>
+                              <Tooltip text="Display the goals of this module" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="infoButton" mnemonicParsing="false" onAction="#handleInfoButton" prefHeight="27.0" prefWidth="74.0" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Info">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <tooltip>
+                              <Tooltip text="Open the info page for this module" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" style="-fx-background-color: #fff; -fx-background-radius: 0px;" text="Godkjenn">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="12.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <tooltip>
+                              <Tooltip text="Request a meeting with a teacher in order to approve your module" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="textArea" layoutX="117.0" layoutY="11.0" prefHeight="460.0" prefWidth="725.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox alignment="CENTER_RIGHT" layoutX="850.0" prefHeight="41.0" prefWidth="142.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: none; -fx-border-color: none;" text="-">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button id="closeButton" mnemonicParsing="false" onAction="#handleCloseButton" style="-fx-background-color: none;" stylesheets="@../../../../build/classes/slit/prototype/pkg2/main.css" text="x">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="4.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
