@@ -40,11 +40,10 @@ public class Student extends User {
      * @return 
      * The Deliverable class with the matching module name.
      */
-    public Deliverable GetDeliverableforModuleName(String name) {
+    public Deliverable getDeliverableforModuleName(String name) {
         for (int i = 0; i < deliverables.size(); i++) {
             Deliverable d = deliverables.get(i);
             String t = d.getModule().getModuleName();
-            System.out.println(d);
             if (t.equals(name)) {
                 return d;
             }
@@ -52,6 +51,11 @@ public class Student extends User {
         
         System.err.println("Student.GetDeliverableforModuleName: Cannot find any module with specified name!");
         return null;
+    }
+    
+    
+    public void requestApproval() {
+        
     }
     
 }
