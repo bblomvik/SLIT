@@ -17,6 +17,12 @@ public class Module {
     private String description;
     private String goals;
 
+    
+    /*
+    TODO: Maybe change registeredby from string to Teacher. 
+    We can always get the name of the teacher through the object itself.
+    
+    */
     public Module(String moduleName, String requirements, String registeredBy, String description, String goals) {
         this.moduleName = moduleName;
         this.requirements = requirements;

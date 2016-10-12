@@ -31,6 +31,7 @@ public class ApprovalQueue {
         return students;
     }
     
+    
     public void printQueue() {
         Utils.Utilities.Print("Studenter I kø: ");
         for (int i = 0; i < this.getStudents().size(); i++) {

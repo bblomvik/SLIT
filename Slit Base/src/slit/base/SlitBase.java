@@ -31,7 +31,7 @@ public class SlitBase {
         
         ArrayList<Deliverable> x = new ArrayList<Deliverable>();
 
-        Teacher t = new Teacher("123", "Lasse", "persen", "@", 1234, 12345);
+        Teacher t = new Teacher("123", "Lasse", "Persen", "@", 1234, 12345);
 
         Module m = new Module("Modul 1", "Requirements", t.getFirstName() + " " + t.getLastName(), "Description", "goals");
         
@@ -40,7 +40,7 @@ public class SlitBase {
         
         Deliverable d = new Deliverable(m, "date", f);
         
-       f.EditComment("Veldig bra, godkjent", true);
+        d.getFeedback().EditComment("Veldig bra, godkjent", true);
        
         
         x.add(d);
@@ -59,6 +59,8 @@ public class SlitBase {
         
         queue.printQueue();
         
+        
+        Utilities.Print(ourdeliverable.getModule().getDescription());
         
         
     }
