@@ -12,14 +12,14 @@ package slit.base;
 public class Deliverable {
     private Module module;
     private String date;
-    private Feedback comment;
+    private Feedback feedback;
     private boolean approved;
 
-    public Deliverable(Module module, String date, Feedback comment, boolean approved) {
+    public Deliverable(Module module, String date, Feedback feedback) {
         this.module = module;
         this.date = date;
-        this.comment = comment;
-        this.approved = approved;
+        this.feedback = feedback;
+        this.approved = feedback.isApproved();
     }
 
     public Module getModule() {
@@ -30,11 +30,16 @@ public class Deliverable {
         return date;
     }
 
-    public Feedback getComment() {
-        return comment;
+    public Feedback getFeedback() {
+        return feedback;
     }
 
+    /**
+     * 
+     * @return - The state of approval for this deliverable. This state is directly linked to the approval set through Feedback.
+     */
     public boolean isApproved() {
+        approved = feedback.isApproved();
         return approved;
     }
 

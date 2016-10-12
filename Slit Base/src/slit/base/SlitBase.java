@@ -24,22 +24,43 @@ public class SlitBase {
         /*
             THIS IS ALL TESTING STUFF!
         */
+        
+        
+        
+        ApprovalQueue queue = new ApprovalQueue(new ArrayList<Student>());
+        
         ArrayList<Deliverable> x = new ArrayList<Deliverable>();
 
-        Teacher t = new Teacher("123", "Lasse", "persen", "@", 1234, 12345);
+        Teacher t = new Teacher("123", "Lasse", "Persen", "@", 1234, 12345);
 
         Module m = new Module("Modul 1", "Requirements", t.getFirstName() + " " + t.getLastName(), "Description", "goals");
         
         Feedback f = t.createFeedback("Kommentar", false);
         
         
-        Deliverable d = new Deliverable(m, "date", f, f.isApproved());
+        Deliverable d = new Deliverable(m, "date", f);
+        
+        d.getFeedback().EditComment("Veldig bra, godkjent", true);
+       
         
         x.add(d);
         
         Student s = new Student("123", "Ola", "davidsen", "@", 1234, 12345, x);
+        queue.AddStudent(s);
         
-        Utilities.Print(s.GetDeliverableforModuleName("Modul 1").getComment().getComment());
+        Deliverable ourdeliverable = s.getDeliverableforModuleName("Modul 1");
+        
+        
+        if (ourdeliverable.isApproved()) {
+            Utilities.Print("True");
+            Utilities.Print(ourdeliverable.getFeedback().getComment());
+        }
+        
+        
+        queue.printQueue();
+        
+        
+        Utilities.Print(ourdeliverable.getModule().getDescription());
         
         
     }

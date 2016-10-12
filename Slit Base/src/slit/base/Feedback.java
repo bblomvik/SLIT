@@ -23,6 +23,11 @@ public class Feedback {
     public void EditComment(String newComment){
         this.comment = newComment;
     }
+    
+    public void EditComment(String newComment, boolean approved) {
+        this.comment = newComment;
+        this.approved = approved;
+    }
 
     public Teacher getTeacher() {
         return teacher;

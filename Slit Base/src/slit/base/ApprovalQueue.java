@@ -5,6 +5,7 @@
  */
 package slit.base;
 
+import Utilities.Utils;
 import java.util.ArrayList;
 
 /**
@@ -25,5 +26,21 @@ public class ApprovalQueue {
     public void RemoveStudent(Student student) {
         this.students.remove(student);
     }
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+    
+    
+    public void printQueue() {
+        Utils.Utilities.Print("Studenter I kø: ");
+        for (int i = 0; i < this.getStudents().size(); i++) {
+            Student temp = this.getStudents().get(i);
+            Utils.Utilities.Print("Nr " + (i+1) + ": " + temp.getFirstName() + " " + temp.getLastName());
+            
+            
+        }
+    }
+    
     
 }
