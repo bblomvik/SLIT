@@ -26,7 +26,7 @@ public class Student extends User {
         return studentID;
     }
 
-    public ArrayList<Deliverable> getDeliverables() {
+    public ArrayList<Deliverable> deliverable() {
         return deliverables;
     }
     

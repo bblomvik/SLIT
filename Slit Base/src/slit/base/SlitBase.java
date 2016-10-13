@@ -7,6 +7,7 @@ package slit.base;
 
 import Utilities.Utils.Utilities;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
@@ -25,6 +26,12 @@ public class SlitBase {
             THIS IS ALL TESTING STUFF!
         */
         
+        NotificationSystem ns = new NotificationSystem(7, 3, 1);
+        
+        
+        Utilities.Print(Utilities.createDate(2016, 10, 32).toString());
+       
+        
         
         
         ApprovalQueue queue = new ApprovalQueue(new ArrayList<Student>());
@@ -38,7 +45,7 @@ public class SlitBase {
         Feedback f = t.createFeedback("Kommentar", false);
         
         
-        Deliverable d = new Deliverable(m, "date", f);
+        Deliverable d = new Deliverable(m, Utilities.createDate(2016, 10, 15), f);
         
         d.getFeedback().EditComment("Veldig bra, godkjent", true);
        
@@ -61,6 +68,8 @@ public class SlitBase {
         
         
         Utilities.Print(ourdeliverable.getModule().getDescription());
+        
+        ns.checkDates(s);
         
         
     }
