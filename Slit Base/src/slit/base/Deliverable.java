@@ -5,17 +5,19 @@
  */
 package slit.base;
 
+import java.util.Date;
+
 /**
  *
  * @author Mathias
  */
 public class Deliverable {
     private Module module;
-    private String date;
+    private Date date;
     private Feedback feedback;
     private boolean approved;
 
-    public Deliverable(Module module, String date, Feedback feedback) {
+    public Deliverable(Module module, Date date, Feedback feedback) {
         this.module = module;
         this.date = date;
         this.feedback = feedback;
@@ -26,7 +28,7 @@ public class Deliverable {
         return module;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
