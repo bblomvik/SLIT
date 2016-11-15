@@ -62,6 +62,7 @@ public class ModuleSessionBean implements ModuleSessionBeanRemote {
                 modulDataModel = this.convertModuleEntityToModuleDataModel(module);
             }
             
+            
         }
         catch(Exception exception){
              
@@ -87,6 +88,44 @@ public class ModuleSessionBean implements ModuleSessionBeanRemote {
         }
         
         return moduleDataModel;
+    }
+    
+    @Override
+    public void saveModuleDataModel(ModuleDataModel moduleDataModel){
+        try{
+            Module module = this.convertDataModelToModuleEntity(moduleDataModel);
+            
+            em.persist(module);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        
+        }
+    }
+    
+    public Module convertDataModelToModuleEntity(ModuleDataModel moduleDataModel){
+    
+        Module module = new Module();
+        
+        module.setDeadline(moduleDataModel.getDeadline());
+        module.setDescription(moduleDataModel.getDescription());
+        module.setGoals(moduleDataModel.getGoals());
+        module.setModuleID(moduleDataModel.getModuleID());
+        module.setModuleName(moduleDataModel.getModuleName());
+        module.setRequierments(moduleDataModel.getRequierments());
+        
+        try{
+            Teacher teacher = em.find(Teacher.class, moduleDataModel.getTeacherID());
+
+            if(teacher != null){
+                module.setTeacherID(teacher);
+            }
+        }
+        catch(Exception exception){
+            exception.printStackTrace();
+        }
+        
+        return module;
     }
 
  

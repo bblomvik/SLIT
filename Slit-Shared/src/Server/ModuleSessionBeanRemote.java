@@ -20,5 +20,7 @@ public interface ModuleSessionBeanRemote {
     
     ModuleDataModel getModel(String id);
     
+    void saveModuleDataModel(ModuleDataModel moduleDataModel);
+    
 }
 
